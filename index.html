@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Project tracking intro component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400&family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo"><img src="./images/logo.svg" alt=""></div>
+
+      <nav>
+        <a href="#">PRODUCT</a>
+        <a href="#">FEATURES</a>
+        <a href="#">PRICING</a>
+        <span class="dot"></span>
+        <a href="#">LOGIN</a>
+      </nav>
+  </header>
+
+  <!-- MOBILE MENU BUTTON -->
+  <div class="mobile-nav">
+    <div class="logo"><img src="./images/logo.svg" alt=""></div>
+
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu">
+      <img id="menuIcon" src="./images/icon-hamburger.svg" alt="">
+    </button>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#">PRODUCT</a>
+    <a href="#">FEATURES</a>
+    <a href="#">PRICING</a>
+
+    <hr>
+
+    <a href="#" class="login">LOGIN</a>
+  </div>
+
+  <section class="hero">
+
+    <div class="left">
+      <div class="tag">
+        <span>NEW</span>
+        <p>MONOGRAPH DASHBOARD</p>
+      </div>
+
+     <h1>POWERFUL INSIGHTS INTO YOUR TEAM</h1>
+
+     <p class="desc">
+      Project planning and time tracking <br> for agile teams
+     </p>
+
+     <div class="buttons">
+     <button id="demoBtn">DEMO SCHEDULED</button>
+     <p>TO SEE A PREVIEW</p>
+     </div>
+    </div>
+
+    <!---right side image-->
+    <div class="right">
+    <img src="./images/illustration-devices.svg" alt="device-illustration">
+   </div>
+ 
+  </section>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Barlow", Arial, sans-serif;
+    background: #fff;
+    color: hsl(230, 29%, 20%);
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 52%;
+    background: hsl(207, 33%, 95%);
+    border-bottom-left-radius: 60px;
+    z-index: 0;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 80px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.logo{
+    width: 20px;
+    height: 20px;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+nav{
+    display:inline-flex;
+    gap: 40px;
+    align-items: center;
+}
+
+nav a{
+    font-family: "Barlow Condensed", Arial, sans-serif;
+    text-decoration: none;
+    color: hsl(230, 29%, 20%);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.dot{
+    width: 5px;
+    height: 5px;
+    background: #bbb;
+    border-radius: 50%;
+}
+
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 80px;
+    min-height: 80vh;
+    position: relative;
+    z-index: 1;
+}
+
+.left{
+
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.tag{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.tag span{
+    font-family: "Barlow Condensed", Arial, sans-serif;
+    background: #ff5b5b;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.tag p{
+ font-family: "Barlow Condensed", Arial, sans-serif;
+ letter-spacing: 4px;
+ color: #999;
+ font-size:10px ;
+}
+
+h1{
+    font-family: "Barlow Condensed", Arial, sans-serif;
+    font-size: 40px;
+    line-height: 1;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+.desc{
+    color: #777;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+button{
+    font-family: "Barlow Condensed", Arial, sans-serif;
+    background: #ff5b5b;
+    border: none;
+    color: #fff;
+    padding: 15px 25px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.buttons{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.buttons p{
+    font-family: "Barlow Condensed", Arial, sans-serif;
+    color: hsl(231, 7%, 65%);
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.right img{
+    width: 600px;
+    max-width: none;
+    transform: translateX(120px);
+}
+
+.mobile-menu{
+    display: none;
+}
+
+.mobile-nav{
+    display: none;
+}
+
+
+
+
+/* =========================
+   MOBILE VIEW
+   MAX WIDTH 768PX
+========================= */
+
+@media (max-width:768px){
+
+  body{
+    overflow-x:hidden;
+  }
+
+  body::before{
+    width:50%;
+    height:425px;
+    border-bottom-left-radius:60px;
+  }
+
+  .navbar{
+    display:none;
+  }
+  
+
+  /* MOBILE NAV */
+  .mobile-nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:38px 32px;
+    position:relative;
+    z-index:1001;
+  }
+
+  .menu-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:24px;
+    height:24px;
+    background:transparent;
+    border:0;
+    padding:0;
+    cursor:pointer;
+  }
+
+  .menu-btn img{
+    width:24px;
+    height:auto;
+    display:block;
+  }
+
+  /* MOBILE MENU */
+  .mobile-menu{
+    position:absolute;
+    top:100px;
+    left:50%;
+    transform:translateX(-50%);
+    width:calc(100% - 64px);
+    background:#fff;
+    padding:28px 24px;
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    gap:30px;
+    border-radius:5px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    z-index:1000;
+  }
+
+  .mobile-menu a{
+    font-family:"Barlow Condensed", Arial, sans-serif;
+    text-decoration:none;
+    color:#242942;
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:2px;
+  }
+
+  .mobile-menu hr{
+    width:100%;
+    border:none;
+    border-top:1px solid #ddd;
+  }
+  .mobile-menu.open{
+    display: flex;
+  }
+
+  .login{
+    color:#999 !important;
+  }
+
+  /* HERO SECTION */
+  .hero{
+    flex-direction:column;
+    align-items:stretch;
+    padding:20px 32px 60px;
+    gap:28px;
+    min-height:auto;
+  }
+
+  /* IMAGE */
+  .right{
+    order:-1;
+    width:100%;
+    height:300px;
+    position:relative;
+  }
+
+  .right img{
+    width:515px;
+    max-width:none;
+    position:absolute;
+    top:0;
+    left:75px;
+    transform:none;
+    margin:0;
+  }
+
+  /* TEXT */
+  .left{
+    width:100%;
+    margin-bottom:0;
+  }
+
+  .tag{
+    margin-bottom:18px;
+    gap:16px;
+  }
+
+  .tag p{
+    font-size:14px;
+    letter-spacing:4px;
+  }
+
+  h1{
+    font-size:40px;
+    line-height:1;
+    margin-top:0;
+    margin-bottom:16px;
+  }
+
+  .desc{
+    font-size:18px;
+    line-height:1.45;
+    margin-bottom:26px;
+  }
+
+  /* BUTTONS */
+  .buttons{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    flex-wrap:nowrap;
+  }
+
+  button{
+    padding:13px 23px;
+    font-size:12px;
+    letter-spacing:1px;
+  }
+
+  .buttons p{
+    font-size:11px;
+    letter-spacing:2.7px;
+    color:#999;
+  }
+}
